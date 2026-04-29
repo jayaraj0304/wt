@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Cart</h2>
+<ul id="list"></ul>
+<p id="total">Total: ₹0</p>
+
+<script>
+let cart=[], total=0;
+
+function addToCart(b,p){
+    cart.push({b,p});
+    total+=p;
+    show();
+}
+
+function show(){
+    let l=document.getElementById("list");
+    l.innerHTML="";
+    cart.forEach(i=>{
+        let li=document.createElement("li");
+        li.innerText=i.b+" ₹"+i.p;
+        l.appendChild(li);
+    });
+    document.getElementById("total").innerText="Total: ₹"+total;
+}
+</script>
+
+</body>
+</html>
