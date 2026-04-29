@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body { font-family: Arial; background:#f4f4f4; }
+a { display:block; margin:5px; padding:6px; background:#3498db; color:#fff; text-decoration:none; }
+button { margin-left:10px; }
+</style>
+
+<script>
+function add(b,p){
+    parent.frames["content"].addToCart(b,p);
+}
+</script>
+</head>
+
+<body>
+<h3>Menu</h3>
+
+<a href="home.html" target="content">Home</a>
+<a href="book1.html" target="content">Book1</a>
+<a href="book2.html" target="content">Book2</a>
+<a href="cart.html" target="content">Cart</a>
+
+<hr>
+
+<p>Book1 ₹500 <button onclick="add('Book1',500)">Add</button></p>
+<p>Book2 ₹300 <button onclick="add('Book2',300)">Add</button></p>
+
+</body>
+</html>
